@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Задание 1</title>
+  </head>
+  <body>
+    <h3>Task 01</h3>
+    <!-- Форма для ввода двух чисел -->
+    <form name="inputnumbers">
+        <h3>Первое число:</h3>
+        <p><input type="number" name="number1" step="0.1" value="0.1"></input></p>
+        <h3>Второе число:</h3>
+        <p><input type="number" name="number2" step="0.1" value="0.2"></input></p>
+        <p><input type="button" name="btn" value="Cложить"></input></p>
+    </form>
+    <script>
+      function sumForm(){
+
+        // находим поля number1 и number2
+        var num1Box = document.inputnumbers.number1;
+        var num2Box = document.inputnumbers.number2;
+        // присваиваем переменным значения полей
+        var num1 = parseFloat(num1Box.value);
+        var num2 = parseFloat(num2Box.value);
+        // сумма и вывод
+        var sum = num1 + num2;
+        alert("Результат:\n\n" + sum.toFixed(1));
+             
+      }
+  
+      // перехватываем нажатие на кнопку и запускаем функцию
+      var sumButton = document.inputnumbers.btn;
+      sumButton.addEventListener("click", sumForm);
+    </script>
+    
+  
+  </body>
+</html>
